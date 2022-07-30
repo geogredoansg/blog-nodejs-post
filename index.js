@@ -13,7 +13,7 @@ const postRoutes = require("./routes/Post.route");
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.use(morgan('dev'));
+app.use(morgan('common'));
 app.use("/api", postRoutes);
 
 app.listen(port, () => {
