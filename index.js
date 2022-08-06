@@ -4,8 +4,9 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const db = require("./database");
 
+require('dotenv').config();
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 // we will create these todoRoutes in the future
 const postRoutes = require("./routes/Post.route");
