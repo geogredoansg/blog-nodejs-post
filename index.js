@@ -18,7 +18,7 @@ app.use(morgan('common'));
 app.use("/api", postRoutes);
 
 // health check ALB
-app.get('/health-check', (request, response) => { res.status(200).end("")})
+app.get('/health-check', (request, res) => { res.status(200).end("")})
 
 app.listen(port, () => {
   console.log(`
